@@ -1,34 +1,30 @@
 {
     type Circle = {
-        shape: string;
+        shape: "circle";
         radius: number;
     }
     type Rectangle = {
-        shape: string;
+        shape: "rectangle";
         height: number;
         width: number;
     }
 
-    const calculateShapeArea = (area: Circle | Rectangle) => {
-        if ("radius" in area) {
-            return Math.PI * area.radius * area.radius
+    const calculateShapeArea = (area: Circle | Rectangle) : number=> {
+        if (area.shape === "circle") {
+            return Math.PI * area.radius * area.radius;
         }
-        else if ("height" in area) {
-            return area.height * area.width
+        else if (area.shape === "rectangle") {
+            return area.height * area.width;
         }
-        else{
-            return "It is not a circle nor a rectangle"
-        }
-
+        throw new Error("Shape type is not correct");
     }
     const rectangleArea = calculateShapeArea({
         shape: "rectangle",
-        width: 4,
-        height: 6,
+        width: 8,
+        height: 4,
       });
 
-    const circleArea = calculateShapeArea({ shape: "", radius: 5 });
-
+    const circleArea = calculateShapeArea({ shape: "circle", radius: 9 });
 
 
 }
