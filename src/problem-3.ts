@@ -1,12 +1,13 @@
 
-
+{
     const countWordOccurrences = (sentence: string, word: string): number => {
-        const words = sentence.toLocaleLowerCase().split(/\W+/);
-        const findWord = word.toLocaleLowerCase();
+        const words = sentence.toLowerCase().split(" ");
+        const findWord = word.toLowerCase();
         const findWordCount = words.filter(word => word === findWord)
         return findWordCount.length
     }
 
-    countWordOccurrences("TypeScript is great. I love TypeScript!", "typescript");
+    countWordOccurrences("I love TypeScript", "typescript");
 
 
+}

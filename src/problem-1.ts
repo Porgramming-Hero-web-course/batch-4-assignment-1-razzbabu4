@@ -5,6 +5,5 @@
     }
 
     const sum = sumArray([1, 2, 3])
-    // console.log(sum);
 
 
