@@ -18,4 +18,4 @@ const updateProfile = (profile: Profile, partial: PartialUpdate): Profile => {
 }
 
 const myProfile = { name: "Alice", age: 25, email: "alice@example.com" };
-updateProfile(myProfile, { name: "Bruce" })
+updateProfile(myProfile, { name: "Bruce", email: "bruce@example.com" })
