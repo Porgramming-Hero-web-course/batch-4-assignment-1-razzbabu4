@@ -1,4 +1,4 @@
-{
+
 
     const countWordOccurrences = (sentence: string, word: string): number => {
         const words = sentence.toLocaleLowerCase().split(/\W+/);
@@ -10,4 +10,3 @@
     countWordOccurrences("TypeScript is great. I love TypeScript!", "typescript");
 
 
-}

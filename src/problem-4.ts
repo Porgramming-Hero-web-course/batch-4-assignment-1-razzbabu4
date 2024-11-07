@@ -1,4 +1,4 @@
-{
+
     type Circle = {
         shape: "circle";
         radius: number;
@@ -27,4 +27,3 @@
     const circleArea = calculateShapeArea({ shape: "circle", radius: 9 });
 
 
-}
